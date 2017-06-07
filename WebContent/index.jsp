@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form method="post" action="answer.jsp">
+	<form method="post" action="checkuserandpass">
 		<table>
 			<tr>
 				<td><p>Потребителско име</p></td>
@@ -22,6 +22,8 @@
 			<td colspan="2" width="100%"><input type="submit" value="Вход" /></td>
 		</table>
 	</form>
+	
+	<%= request.getAttribute("message") %>
 
 </body>
 </html>
