@@ -20,8 +20,10 @@ public class CheckUserAndPass {
 				pass = rs.getString("password");
 			}
 			stmt.close();
-			if (pass.equals(password)) {
-				return true;
+			if (pass != null) {
+				if (pass.equals(password)) {
+					return true;
+				}
 			}
 		} catch (SQLException e) {
 			System.out.println("not queried");

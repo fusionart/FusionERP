@@ -48,7 +48,7 @@ public class CheckUserAndPassServlet extends HttpServlet {
 		Boolean isTrue = checkUserPass.checkUserAndPass(username, password);
 
 		if (isTrue) {
-			RequestDispatcher redirect = request.getRequestDispatcher("/WEB-INF/JSPs/secondscreen.jsp");
+			RequestDispatcher redirect = request.getRequestDispatcher("/WEB-INF/JSPs/mainMenu.jsp");
 			redirect.forward(request, response);
 		} else {
 			request.setAttribute("message", "Неуспешен вход");

@@ -22,8 +22,12 @@
 			<td colspan="2" width="100%"><input type="submit" value="Вход" /></td>
 		</table>
 	</form>
-	
-	<%= request.getAttribute("message") %>
+
+	<%
+		String login_msg = (String) request.getAttribute("message");
+		if (login_msg != null)
+			out.println(login_msg);
+	%>
 
 </body>
 </html>
