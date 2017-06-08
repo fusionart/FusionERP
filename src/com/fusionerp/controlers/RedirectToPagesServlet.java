@@ -15,39 +15,48 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/RedirectToPages")
 public class RedirectToPagesServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public RedirectToPagesServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+	public RedirectToPagesServlet() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		String createNew = request.getParameter("createNew");
 		String infoMenu = request.getParameter("infoMenu");
-		
-		if (createNew!=null) {
-			RequestDispatcher redirect = request.getRequestDispatcher("/WEB-INF/JSPs/createNew.jsp");
-			redirect.forward(request, response);
+
+		// if (createNew!=null) {
+		// RequestDispatcher redirect =
+		// request.getRequestDispatcher("/WEB-INF/JSPs/createNew.jsp");
+		// redirect.forward(request, response);
+		// }
+		if (createNew != null) {
+			request.setAttribute("message", "Неуспешен вход");
+			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/JSPs/mainMenu.jsp");
+			view.forward(request, response);
 		}
-		
-		if (infoMenu!=null) {
+
+		if (infoMenu != null) {
 			RequestDispatcher redirect = request.getRequestDispatcher("/WEB-INF/HTML/underConstruction.html");
 			redirect.forward(request, response);
 		}
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 	}
 
 }
