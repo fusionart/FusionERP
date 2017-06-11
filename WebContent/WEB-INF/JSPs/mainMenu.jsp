@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>FusionERP Основно меню</title>
 </head>
 <body>
 	<form method="get" action="redirect">
@@ -14,20 +14,23 @@
 
 
 	<%
-		String login_msg = (String) request.getAttribute("message");
-		if (login_msg != null) {
+		String login_msg = (String) request.getAttribute("expand");
+		if (login_msg == "true") {
 	%>
 	<form method="get" action="redirect">
 		<button name="cable" id="cable" type="submit">Кабел</button>
 		<button name="twisted" id="twisted" type="submit">Усукан</button>
-		<button name="splice" id=""splice"" type="submit">Спойка</button>
+		<button name="splice" id="splice" type="submit">Спойка</button>
 	</form>
 	<%
 		}
 	%>
 
 
-
+	<form method="get" action="redirect">
+		<button name="buyPart" id="buyPart" type="submit">Покупен
+			материал</button>
+	</form>
 	<form method="get" action="redirect">
 		<button name="infoMenu" id="infoMenu" type="submit">Информационно
 			меню</button>

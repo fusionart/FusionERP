@@ -32,21 +32,25 @@ public class RedirectToPagesServlet extends HttpServlet {
 			throws ServletException, IOException {
 		String createNew = request.getParameter("createNew");
 		String infoMenu = request.getParameter("infoMenu");
-
+		String buyPart = request.getParameter("buyPart");
+		String cable = request.getParameter("cable");
 		// if (createNew!=null) {
-		// RequestDispatcher redirect =
-		// request.getRequestDispatcher("/WEB-INF/JSPs/createNew.jsp");
+		// RequestDispatcher redirect = request.getRequestDispatcher("/WEB-INF/JSPs/createNew.jsp");
 		// redirect.forward(request, response);
 		// }
 		if (createNew != null) {
-			request.setAttribute("message", "Неуспешен вход");
+			request.setAttribute("expand", "true");
 			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/JSPs/mainMenu.jsp");
 			view.forward(request, response);
 		}
 
-		if (infoMenu != null) {
+		if (infoMenu != null || buyPart != null) {
 			RequestDispatcher redirect = request.getRequestDispatcher("/WEB-INF/HTML/underConstruction.html");
 			redirect.forward(request, response);
+		}
+		if (cable != null) {
+			RequestDispatcher redirect = request.getRequestDispatcher("/WEB-INF/JSPs/cable.jsp");
+			response.sendRedirect(request.getContextPath() + "/dropdownmenu");			
 		}
 	}
 
