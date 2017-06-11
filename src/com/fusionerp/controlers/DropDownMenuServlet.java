@@ -32,8 +32,8 @@ public class DropDownMenuServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String project = request.getParameter("project");
-		System.out.println(project);
+		//Map<String, String> project = (Map<String, String>) request.getAttribute("project");
+		//System.out.println(request.getParameter("project"));
 		Map<String, String> dropMenu = ddm.dropDownMenu();
 		request.setAttribute("dropMenu", dropMenu);
 		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/JSPs/cable.jsp");

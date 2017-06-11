@@ -8,15 +8,21 @@
 <title>fusionERP Създаване на нов кабел</title>
 </head>
 <body>
-	<select method="get" name="project" action="dropdownmenu">
-		
-		<c:forEach items="${dropMenu}" var="dropMenuProjects">
-			<option value="${dropMenuProjects.key}">${dropMenuProjects.value}</option>
+
+	<form method="get" action="dropdowndependent">
+		<select name="project" id="project" onchange="this.form.submit();">
+			<option value="-1">Изберете проект</option>
+			<c:forEach items="${dropMenu}" var="dropMenuProjects">
+				<option value="${dropMenuProjects.key}">${dropMenuProjects.value}</option>
+			</c:forEach>
+		</select>
+	</form>
+	<select name="projectGroup">
+		<option value="-1">Изберете група</option>
+		<c:forEach items="${groups}" var="group">
+			<option value="${group.key}">${group.value}</option>
 		</c:forEach>
 	</select>
-	<select name="projectGroup">
 
-	</select>
-	<h1><%=request.getAttribute("project")%></h1>
 </body>
 </html>
