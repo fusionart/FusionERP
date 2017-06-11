@@ -1,6 +1,7 @@
 package com.fusionerp.controlers;
 
 import java.io.IOException;
+import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.fusionerp.models.DropDownMenu;
+import com.fusionerp.models.DropDownMenuProject;
 
 /**
  * Servlet implementation class DropDownMenuServlet
@@ -17,7 +18,7 @@ import com.fusionerp.models.DropDownMenu;
 @WebServlet("/DropDownMenuServlet")
 public class DropDownMenuServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	DropDownMenu ddm = new DropDownMenu();
+	DropDownMenuProject ddm = new DropDownMenuProject();
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -32,9 +33,9 @@ public class DropDownMenuServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String project = request.getParameter("project");
-		String dropMenu = ddm.dropDownMenu();
+		System.out.println(project);
+		Map<String, String> dropMenu = ddm.dropDownMenu();
 		request.setAttribute("dropMenu", dropMenu);
-		System.out.println(dropMenu);
 		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/JSPs/cable.jsp");
 		view.forward(request, response);
 	}
