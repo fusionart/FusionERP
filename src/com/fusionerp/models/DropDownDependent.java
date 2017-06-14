@@ -24,7 +24,7 @@ public class DropDownDependent {
 				for (int i = 1; i < 11; i++) {
 					String grStr = "group" + i;
 					if (rs.getString(grStr) != null) {
-						System.out.println(rs.getString(grStr));
+						//System.out.println(rs.getString(grStr));
 						projectGrpoups.put(i+"", rs.getString(grStr));
 					}
 				}
@@ -37,9 +37,9 @@ public class DropDownDependent {
 			System.out.println("not queried");
 			e.printStackTrace();
 		}
-		for (Map.Entry<String, String> pair : projectGrpoups.entrySet()) {
-			System.out.println(pair.getValue());
-		}
+//		for (Map.Entry<String, String> pair : projectGrpoups.entrySet()) {
+//			System.out.println(pair.getValue());
+//		}
 		return projectGrpoups;
 	}
 }

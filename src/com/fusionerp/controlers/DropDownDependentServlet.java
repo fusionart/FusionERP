@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import com.google.gson.Gson;
 
 import com.fusionerp.models.DropDownDependent;
 
@@ -38,13 +39,20 @@ public class DropDownDependentServlet extends HttpServlet {
 		Object project =  request.getParameter("project");
 		//System.out.println("pr "+project);
 		//System.out.println("name "+request.getParameter("project"));
+		
 
 		int gr = Integer.valueOf((String) project);
 		System.out.println(gr);
 		Map<String, String> groups = ddd.dropDownMenu(gr);
-		request.setAttribute("groups", groups);
-		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/JSPs/cable.jsp");
-		view.forward(request, response);
+		
+		String json = new Gson().toJson(groups);
+		response.setContentType("application/json");
+	    response.setCharacterEncoding("UTF-8");
+	    response.getWriter().write(json);
+		
+//		request.setAttribute("groups", groups);
+//		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/JSPs/cable.jsp");
+//		view.forward(request, response);
 
 	}
 
