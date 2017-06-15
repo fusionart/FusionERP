@@ -30,18 +30,45 @@
 
 </head>
 <body>
-
-	<select name="project" id="project">
-		<option value="-1">Изберете проект</option>
-		<c:forEach items="${dropMenu}" var="dropMenuProjects">
-			<option value="${dropMenuProjects.key}">${dropMenuProjects.value}</option>
-		</c:forEach>
-	</select>
-
+	<form class="project-form">
+		<select name="project" id="project">
+			<option value="-1">Изберете проект</option>
+			<c:forEach items="${dropMenu}" var="dropMenuProjects">
+				<option value="${dropMenuProjects.key}">${dropMenuProjects.value}</option>
+			</c:forEach>
+		</select>
+	</form>
+	<form class="group-form"></form>
 	<select name="projectGroup" id="projectGroup">
 		<option value="-1">Изберете група</option>
-
 	</select>
+	</form>
+	<div class="next-operation">
+		<p>Последваща операция</p>
+		<input type="radio" name="nextoperation" value="form"> Формиране 
+		<input type="radio" name="nextoperation" value="twisting"> Усукване 
+		<input type="radio" name="nextoperation" value="splice"> Спойка
+	</div>
+	<div class="moq-tag">
+		<select name="moq" id="moq">
+			<option value="0">Изберете партида</option>
+			<option value="1">50</option>
+			<option value="2">100</option>
+			<option value="3">250</option>
+			<option value="4">500</option>
+			<option value="5">1000</option>
+		</select>
+	</div>
+	<div class="production-location">
+		<p>Производствена локация</p>
+		<input type="radio" name="prlocation" value="loc1"> Локация 1
+		<input type="radio" name="prlocation" value="loc2"> Локация 2
+	</div>
+	<div class="for-location">
+		<p>Дестинация локация</p>
+		<input type="radio" name="forlocation" value="loc1"> Локация 1
+		<input type="radio" name="forlocation" value="loc2"> Локация 2
+	</div>
 
 </body>
 </html>
