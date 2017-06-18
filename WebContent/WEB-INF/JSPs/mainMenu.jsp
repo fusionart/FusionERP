@@ -5,27 +5,26 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>FusionERP Основно меню</title>
+<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script>
+	$(document).ready(function() {
+		$('#createNew').click(function() {
+			$('#subproducts').toggle(350);
+		});
+	});
+</script>
 </head>
 <body>
-	<form method="get" action="redirect">
+
 		<button name="createNew" id="createNew" type="submit">Създаване
 			на нов полуфабрикат</button>
-	</form>
 
 
-	<%
-		String login_msg = (String) request.getAttribute("expand");
-		if (login_msg == "true") {
-	%>
-	<form method="get" action="redirect">
+	<form method="get" action="redirect" id="subproducts" style='display:none'>
 		<button name="cable" id="cable" type="submit">Кабел</button>
 		<button name="twisted" id="twisted" type="submit">Усукан</button>
 		<button name="splice" id="splice" type="submit">Спойка</button>
 	</form>
-	<%
-		}
-	%>
-
 
 	<form method="get" action="redirect">
 		<button name="buyPart" id="buyPart" type="submit">Покупен

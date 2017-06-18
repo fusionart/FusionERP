@@ -30,19 +30,10 @@ public class RedirectToPagesServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String createNew = request.getParameter("createNew");
+		//String createNew = request.getParameter("createNew");
 		String infoMenu = request.getParameter("infoMenu");
 		String buyPart = request.getParameter("buyPart");
 		String cable = request.getParameter("cable");
-		// if (createNew!=null) {
-		// RequestDispatcher redirect = request.getRequestDispatcher("/WEB-INF/JSPs/createNew.jsp");
-		// redirect.forward(request, response);
-		// }
-		if (createNew != null) {
-			request.setAttribute("expand", "true");
-			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/JSPs/mainMenu.jsp");
-			view.forward(request, response);
-		}
 
 		if (infoMenu != null || buyPart != null) {
 			RequestDispatcher redirect = request.getRequestDispatcher("/WEB-INF/HTML/underConstruction.html");
@@ -50,7 +41,7 @@ public class RedirectToPagesServlet extends HttpServlet {
 		}
 		if (cable != null) {
 			RequestDispatcher redirect = request.getRequestDispatcher("/WEB-INF/JSPs/cable.jsp");
-			response.sendRedirect(request.getContextPath() + "/dropdownmenu");			
+			response.sendRedirect(request.getContextPath() + "/dropdownmenu");
 		}
 	}
 

@@ -25,6 +25,15 @@
 				});
 			});
 		});
+
+		$('input[type="radio"]').click(function() {
+			if ($(this).attr('id') == 'splice') {
+				$('#strip').show('slow');
+			}
+			else if ($(this).attr('id') == 'form'||$(this).attr('id') == 'twisting'){
+				$('#strip').hide('slow');
+				} 
+		});
 	});
 </script>
 
@@ -45,10 +54,18 @@
 	</form>
 	<div class="next-operation">
 		<p>Последваща операция</p>
-		<input type="radio" name="nextoperation" value="form"> Формиране 
-		<input type="radio" name="nextoperation" value="twisting"> Усукване 
-		<input type="radio" name="nextoperation" value="splice"> Спойка
+		<input type="radio" name="nextoperation" value="form" id="form" checked="uncheked"> Формиране 
+		<input type="radio" name="nextoperation" value="twisting" id="twisting"> Усукване 
+		<input type="radio" name="nextoperation" value="splice" id="splice"> Спойка
 	</div>
+	
+	<div class="stripping-div" id="strip" style='display:none'>
+		<p>Изберете оголване</p>
+		<input type="radio" name="stripping" value="12"> 12 
+		<input type="radio" name="stripping" value="15"> 15 
+	</div>
+	
+	
 	<div class="moq-tag">
 		<select name="moq" id="moq">
 			<option value="0">Изберете партида</option>
@@ -69,6 +86,30 @@
 		<input type="radio" name="forlocation" value="loc1"> Локация 1
 		<input type="radio" name="forlocation" value="loc2"> Локация 2
 	</div>
+	
+	<div class="bom">
+		<p>Материална спецификация</p>
+		<div class="bom-side1">
+			<p>Лява страна</p>
+			<select>
+				<option value="-1">Изберете контракт</option>
+			</select>
+			<select>
+				<option value="-1">Изберете сеал</option>
+			</select>
+		</div>
+		<div class="bom-side2">
+			<p>Дясна страна</p>
+			<select>
+				<option value="-1">Изберете контракт</option>
+			</select>
+			<select>
+				<option value="-1">Изберете сеал</option>
+			</select>
+		</div>
+	</div>
+	
+	<input type="button" value="Запази">
 
 </body>
 </html>
