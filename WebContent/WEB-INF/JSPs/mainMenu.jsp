@@ -16,11 +16,12 @@
 </head>
 <body>
 
-		<button name="createNew" id="createNew" type="submit">Създаване
-			на нов полуфабрикат</button>
+	<button name="createNew" id="createNew" type="submit">Създаване
+		на нов полуфабрикат</button>
 
 
-	<form method="get" action="redirect" id="subproducts" style='display:none'>
+	<form method="get" action="redirect" id="subproducts"
+		style='display: none'>
 		<button name="cable" id="cable" type="submit">Кабел</button>
 		<button name="twisted" id="twisted" type="submit">Усукан</button>
 		<button name="splice" id="splice" type="submit">Спойка</button>

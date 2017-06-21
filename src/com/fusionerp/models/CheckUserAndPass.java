@@ -8,27 +8,31 @@ import java.sql.Statement;
 import com.fusionerp.sqlConn.SqlConnection;
 
 public class CheckUserAndPass {
-	SqlConnection sqlConn = new SqlConnection();
-
-	public Boolean checkUserAndPass(String user, String password) {
-		Connection conn = sqlConn.getConn();
+	private static SqlConnection sqlConn = new SqlConnection();
+	private static Connection conn = sqlConn.getConn();
+	
+	public static UserModel checkUserAndPass(UserModel user) {
+		String un = user.getUsername();
+		String pw = user.getPassword();
 		String pass = null;
 		try {
 			Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery("SELECT * FROM users1 WHERE username LIKE '%" + user + "%';");
+			ResultSet rs = stmt.executeQuery("SELECT * FROM users WHERE username LIKE '%" + un + "%';");
 			while (rs.next()) {
 				pass = rs.getString("password");
 			}
 			stmt.close();
 			if (pass != null) {
-				if (pass.equals(password)) {
-					return true;
+				if (pass.equals(pw)) {
+					user.setValid(true);
+					return user;
 				}
 			}
 		} catch (SQLException e) {
 			System.out.println("not queried");
 			e.printStackTrace();
 		}
-		return false;
+		user.setValid(false);
+		return user;
 	}
 }

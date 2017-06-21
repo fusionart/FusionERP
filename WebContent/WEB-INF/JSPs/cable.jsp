@@ -11,13 +11,11 @@
 
 <script>
 	$(document).ready(function() {
-
 		$('#project').change(function(event) {
 			var projects = $("select#project").val();
 			$.get('dropdowndependent', {
 				project : projects
 			}, function(response) {
-
 				var select = $('#projectGroup');
 				select.find('option').remove();
 				$.each(response, function(index, value) {
@@ -64,8 +62,8 @@
 		<input type="radio" name="stripping" value="12"> 12 
 		<input type="radio" name="stripping" value="15"> 15 
 	</div>
-	
-	
+
+
 	<div class="moq-tag">
 		<select name="moq" id="moq">
 			<option value="0">Изберете партида</option>
@@ -89,6 +87,20 @@
 	
 	<div class="bom">
 		<p>Материална спецификация</p>
+		<div class="cables">
+			<div class="cable-section">
+			<select>
+				<option value="-1">Изберете сечение</option>
+			</select>			
+			</div>
+			
+			<div class="cable-color">
+			<select>
+				<option value="-1">Изберете цвят</option>
+			</select>			
+			</div>
+
+		</div>
 		<div class="bom-side1">
 			<p>Лява страна</p>
 			<select>
