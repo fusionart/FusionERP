@@ -15,6 +15,14 @@
     <url-pattern>/checkuserandpass</url-pattern>
   </servlet-mapping>
   <servlet>
+    <servlet-name>CreateNewUserServlet</servlet-name>
+    <servlet-class>com.fusionerp.controlers.CreateNewUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateNewUserServlet</servlet-name>
+    <url-pattern>/createnewuser</url-pattern>
+  </servlet-mapping>
+  <servlet>
     <servlet-name>RedirectToPagesServlet</servlet-name>
     <servlet-class>com.fusionerp.controlers.RedirectToPagesServlet</servlet-class>
   </servlet>
@@ -30,8 +38,7 @@
     <servlet-name>DropDownMenuServlet</servlet-name>
     <url-pattern>/dropdownmenu</url-pattern>
   </servlet-mapping>
-  
-    <servlet>
+  <servlet>
     <servlet-name>DropDownDependentServlet</servlet-name>
     <servlet-class>com.fusionerp.controlers.DropDownDependentServlet</servlet-class>
   </servlet>
@@ -39,7 +46,4 @@
     <servlet-name>DropDownDependentServlet</servlet-name>
     <url-pattern>/dropdowndependent</url-pattern>
   </servlet-mapping>
-  
-  
-  
 </web-app>

@@ -20,11 +20,10 @@
 					class="field" /></td>
 			</tr>
 			<td colspan="2" width="100%"><input type="submit" value="Вход" /></td>
-			<td></td>
 		</table>
 	</form>
-	<form method="post">
-		<td colspan="2" width="100%"><input type="submit" value="Регистрация" /></td>
+	<form method="get" action="redirect">
+		<button name="registration" id="registration" type="submit">Регистрация</button>
 	</form>
 
 	<%

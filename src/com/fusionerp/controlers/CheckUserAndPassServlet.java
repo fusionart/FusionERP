@@ -47,9 +47,6 @@ public class CheckUserAndPassServlet extends HttpServlet {
 		UserModel user = new UserModel();
 		user.setUsername(request.getParameter("username"));
 		user.setPassword(request.getParameter("password"));
-		//String username = request.getParameter("username");
-		//String password = request.getParameter("password");
-		//Boolean isTrue = checkUserPass.checkUserAndPass(username, password);
 		user = CheckUserAndPass.checkUserAndPass(user);
 
 		if (user.isValid()) {

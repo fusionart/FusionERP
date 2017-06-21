@@ -34,6 +34,8 @@ public class RedirectToPagesServlet extends HttpServlet {
 		String infoMenu = request.getParameter("infoMenu");
 		String buyPart = request.getParameter("buyPart");
 		String cable = request.getParameter("cable");
+		String registration = request.getParameter("registration");
+		System.out.println(registration);
 
 		if (infoMenu != null || buyPart != null) {
 			RequestDispatcher redirect = request.getRequestDispatcher("/WEB-INF/HTML/underConstruction.html");
@@ -42,6 +44,11 @@ public class RedirectToPagesServlet extends HttpServlet {
 		if (cable != null) {
 			RequestDispatcher redirect = request.getRequestDispatcher("/WEB-INF/JSPs/cable.jsp");
 			response.sendRedirect(request.getContextPath() + "/dropdownmenu");
+		}
+		
+		if (registration != null) {
+			RequestDispatcher redirect = request.getRequestDispatcher("/WEB-INF/JSPs/createNewUser.jsp");
+			redirect.forward(request, response);
 		}
 	}
 
