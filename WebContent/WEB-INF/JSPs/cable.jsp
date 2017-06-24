@@ -24,6 +24,19 @@
 			});
 		});
 
+		$('#csection').change(function(event) {
+			var cables = $("select#csection").val();
+			$.get('dropdowndependent', {
+				colors : cables
+			}, function(response) {
+				var select = $('#cable-c');
+				select.find('option').remove();
+				$.each(response, function(index, value) {
+					$('<option>').val(index).text(value).appendTo(select);
+				});
+			});
+		});
+
 		$('input[type="radio"]').click(function() {
 			if ($(this).attr('id') == 'splice') {
 				$('#strip').show('slow');
@@ -89,13 +102,16 @@
 		<p>Материална спецификация</p>
 		<div class="cables">
 			<div class="cable-section">
-			<select>
+			<select name="csection" id="csection">
 				<option value="-1">Изберете сечение</option>
+				<c:forEach items="${dropMenuCables}" var="dmc">
+					<option value="${dmc.key}">${dmc.value}</option>
+				</c:forEach>
 			</select>			
 			</div>
 			
 			<div class="cable-color">
-			<select>
+			<select name="cable-c" id="cable-c">
 				<option value="-1">Изберете цвят</option>
 			</select>			
 			</div>
