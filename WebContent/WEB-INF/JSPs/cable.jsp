@@ -12,7 +12,7 @@
 </head>
 <body>
 	<form method="get" action="generatecablenumber">
-		<input type="hidden" name="category"value="S">
+		<input type="hidden" name="category"value="C">
 		<select name="project" id="project">
 			<option value="-1">Изберете проект</option>
 			<c:forEach items="${dropMenu}" var="dropMenuProjects">
@@ -86,18 +86,18 @@
 				</div>
 
 				<label for="clength">Дължина</label>
-				<input type="text" name="clength" id="clenght">
+				<input type="text" name="clength" id="clenght" required >
 
 			</div>
 			<div class="bom-side1">
 				<p>Лява страна</p>
-				<select>
+				<select name="lsideterminal" id="lsideterminal">
 					<option value="-1">Изберете контракт</option>
 					<c:forEach items="${dropMenuTerminals}" var="dmt">
 						<option value="${dmt.key}">${dmt.value}</option>
 					</c:forEach>
 				</select>
-				<select>
+				<select name="lsideseal" id="lsideseal">
 					<option value="-1">Изберете сеал</option>
 					<c:forEach items="${dropMenuSeals}" var="dms">
 						<option value="${dms.key}">${dms.value}</option>

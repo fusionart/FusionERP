@@ -12,17 +12,21 @@ import com.fusionerp.sqlConn.SqlConnection;
 public class CableNumberDbWriter {
 	SqlConnection sqlConn = new SqlConnection();
 
-	public void writeInDb() {
+	public void writeInDb(CableModel cableModel) {
 		Connection conn = sqlConn.getConn();
 		try {
 			Statement stmt = conn.createStatement();
-			ResultSet rs = stmt.executeQuery("SELECT * FROM project;");
-			while (rs.next()) {
-				
-			}
+			String sql = "INSERT INTO cutCables (operation, project, groupe, sequence, prloc, desloc, nextop, section, color, length, terminall, seall, terminalr, sealr) VALUES('"
+					+ cableModel.getOperation() + "', '" + cableModel.getProject() + "', '" + cableModel.getGroup()
+					+ "', '" + cableModel.getNumber() + "', '" + cableModel.getProductionLocation() + "', '"
+					+ cableModel.getDestiationLocation() + "', '" + cableModel.getNextOperation() + "', '"
+					+ cableModel.getSection() + "', '" + cableModel.getColor() + "', '" + cableModel.getLength()
+					+ "', '" + cableModel.getTerminalLeft() + "', '" + cableModel.getSealLeft() + "', '"
+					+ cableModel.getTerminalRigth() + "', '" + cableModel.getSealRight() + "');";
+			stmt.executeUpdate(sql);
 			stmt.close();
 		} catch (SQLException e) {
-			System.out.println("not queried");
+			System.out.println("not insert");
 			e.printStackTrace();
 		}
 	}

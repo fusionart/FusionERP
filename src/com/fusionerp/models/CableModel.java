@@ -15,7 +15,14 @@ public class CableModel {
 	private String sealLeft;
 	private String terminalRigth;
 	private String sealRight;
+	private int moq;
 	
+	public int getMoq() {
+		return moq;
+	}
+	public void setMoq(int moq2) {
+		this.moq = moq2;
+	}
 	public String getOperation() {
 		return operation;
 	}
