@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -14,12 +14,12 @@
 				<td><p>Парола</p></td>
 			</tr>
 			<tr>
-				<td><input type="text" name="username" id="username"
-					class="field" /></td>
-				<td><input type="password" name="password" id="password"
-					class="field" /></td>
+				<td><input type="text" name="username" id="username" class="field" /></td>
+				<td><input type="password" name="password" id="password" class="field" /></td>
 			</tr>
-			<td colspan="2" width="100%"><input type="submit" value="Вход" /></td>
+			<tr>
+				<td colspan="2" width="100%"><input type="submit" value="Вход" /></td>
+			</tr>
 		</table>
 	</form>
 	<form method="get" action="redirect">
