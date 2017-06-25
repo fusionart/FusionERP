@@ -84,18 +84,30 @@
 			<p>Лява страна</p>
 			<select>
 				<option value="-1">Изберете контракт</option>
+				<c:forEach items="${dropMenuTerminals}" var="dmt">
+					<option value="${dmt.key}">${dmt.value}</option>
+				</c:forEach>
 			</select>
 			<select>
 				<option value="-1">Изберете сеал</option>
+				<c:forEach items="${dropMenuSeals}" var="dms">
+					<option value="${dms.key}">${dms.value}</option>
+				</c:forEach>
 			</select>
 		</div>
 		<div class="bom-side2">
 			<p>Дясна страна</p>
 			<select name="rsideterminal" id="rsideterminal">
 				<option value="-1">Изберете контракт</option>
+				<c:forEach items="${dropMenuTerminals}" var="dmt">
+					<option value="${dmt.key}">${dmt.value}</option>
+				</c:forEach>
 			</select>
 			<select name="rsideseal" id="rsideseal">
 				<option value="-1">Изберете сеал</option>
+				<c:forEach items="${dropMenuSeals}" var="dms">
+					<option value="${dms.key}">${dms.value}</option>
+				</c:forEach>
 			</select>
 		</div>
 	</div>

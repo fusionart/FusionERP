@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.fusionerp.models.DropDownMenuCables;
 import com.fusionerp.models.DropDownMenuProject;
+import com.fusionerp.models.DropDownMenuSeals;
+import com.fusionerp.models.DropDownMenuTerminals;
 
 /**
  * Servlet implementation class DropDownMenuServlet
@@ -21,6 +23,8 @@ public class DropDownMenuServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	DropDownMenuProject ddm = new DropDownMenuProject();
 	DropDownMenuCables ddmc = new DropDownMenuCables();
+	DropDownMenuTerminals ddmt = new DropDownMenuTerminals();
+	DropDownMenuSeals ddms = new DropDownMenuSeals();
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -38,6 +42,10 @@ public class DropDownMenuServlet extends HttpServlet {
 		request.setAttribute("dropMenu", dropMenu);
 		Map<String, String> dropMenuCables = ddmc.dropDownMenuCables();
 		request.setAttribute("dropMenuCables", dropMenuCables);
+		Map<String, String> dropMenuTerminals = ddmt.dropDownMenu();
+		request.setAttribute("dropMenuTerminals", dropMenuTerminals);
+		Map<String, String> dropMenuSeals = ddms.dropDownMenu();
+		request.setAttribute("dropMenuSeals", dropMenuSeals);
 		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/JSPs/cable.jsp");
 		view.forward(request, response);
 	}
