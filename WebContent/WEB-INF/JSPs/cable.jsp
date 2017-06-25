@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
@@ -8,45 +8,8 @@
 <title>fusionERP Създаване на нов кабел</title>
 
 <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="js/cablejs.js" type="text/javascript"></script>
 
-<script>
-	$(document).ready(function() {
-		$('#project').change(function(event) {
-			var projects = $("select#project").val();
-			$.get('dropdowndependent', {
-				project : projects
-			}, function(response) {
-				var select = $('#projectGroup');
-				select.find('option').remove();
-				$.each(response, function(index, value) {
-					$('<option>').val(index).text(value).appendTo(select);
-				});
-			});
-		});
-
-		$('#csection').change(function(event) {
-			var cables = $("select#csection").val();
-			$.get('dropdowndependent', {
-				colors : cables
-			}, function(response) {
-				var select = $('#cable-c');
-				select.find('option').remove();
-				$.each(response, function(index, value) {
-					$('<option>').val(index).text(value).appendTo(select);
-				});
-			});
-		});
-
-		$('input[type="radio"]').click(function() {
-			if ($(this).attr('id') == 'splice') {
-				$('#strip').show('slow');
-			}
-			else if ($(this).attr('id') == 'form'||$(this).attr('id') == 'twisting'){
-				$('#strip').hide('slow');
-				} 
-		});
-	});
-</script>
 
 </head>
 <body>
@@ -58,10 +21,10 @@
 			</c:forEach>
 		</select>
 	</form>
-	<form class="group-form"></form>
-	<select name="projectGroup" id="projectGroup">
-		<option value="-1">Изберете група</option>
-	</select>
+	<form class="group-form">
+		<select name="projectGroup" id="projectGroup">
+			<option value="-1">Изберете група</option>
+		</select>
 	</form>
 	<div class="next-operation">
 		<p>Последваща операция</p>
@@ -128,10 +91,10 @@
 		</div>
 		<div class="bom-side2">
 			<p>Дясна страна</p>
-			<select>
+			<select name="rsideterminal" id="rsideterminal">
 				<option value="-1">Изберете контракт</option>
 			</select>
-			<select>
+			<select name="rsideseal" id="rsideseal">
 				<option value="-1">Изберете сеал</option>
 			</select>
 		</div>
