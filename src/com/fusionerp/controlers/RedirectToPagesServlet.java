@@ -30,28 +30,34 @@ public class RedirectToPagesServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		//String createNew = request.getParameter("createNew");
+		// String createNew = request.getParameter("createNew");
 		String infoMenu = request.getParameter("infoMenu");
 		String buyPart = request.getParameter("buyPart");
 		String cable = request.getParameter("cable");
 		String registration = request.getParameter("registration");
-		//System.out.println(registration);
+		// System.out.println(registration);
 		String backBtn = request.getParameter("backBtn");
 
-		if (infoMenu != null || buyPart != null) {
+		if (buyPart != null) {
 			RequestDispatcher redirect = request.getRequestDispatcher("/WEB-INF/HTML/underConstruction.html");
 			redirect.forward(request, response);
 		}
+		
+		if (infoMenu != null) {
+			RequestDispatcher redirect = request.getRequestDispatcher("/WEB-INF/JSPs/informationMenu.jsp");
+			redirect.forward(request, response);
+		}
+
 		if (cable != null) {
 			RequestDispatcher redirect = request.getRequestDispatcher("/WEB-INF/JSPs/cable.jsp");
 			response.sendRedirect(request.getContextPath() + "/dropdownmenu");
 		}
-		
+
 		if (registration != null) {
 			RequestDispatcher redirect = request.getRequestDispatcher("/WEB-INF/JSPs/createNewUser.jsp");
 			redirect.forward(request, response);
 		}
-		
+
 		if (backBtn != null) {
 			RequestDispatcher redirect = request.getRequestDispatcher("/WEB-INF/JSPs/mainMenu.jsp");
 			redirect.forward(request, response);

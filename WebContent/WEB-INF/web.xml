@@ -12,46 +12,51 @@
 		<servlet-name>CheckUserAndPassServlet</servlet-name>
 		<servlet-class>com.fusionerp.controlers.CheckUserAndPassServlet</servlet-class>
 	</servlet>
-	<servlet>
-		<servlet-name>CreateNewUserServlet</servlet-name>
-		<servlet-class>com.fusionerp.controlers.CreateNewUserServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>RedirectToPagesServlet</servlet-name>
-		<servlet-class>com.fusionerp.controlers.RedirectToPagesServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>DropDownMenuServlet</servlet-name>
-		<servlet-class>com.fusionerp.controlers.DropDownMenuServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>DropDownDependentServlet</servlet-name>
-		<servlet-class>com.fusionerp.controlers.DropDownDependentServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>GenerateCableNumber</servlet-name>
-		<servlet-class>com.fusionerp.controlers.GenerateCableNumber</servlet-class>
-	</servlet>
 	<servlet-mapping>
 		<servlet-name>CheckUserAndPassServlet</servlet-name>
 		<url-pattern>/checkuserandpass</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CreateNewUserServlet</servlet-name>
+		<servlet-class>com.fusionerp.controlers.CreateNewUserServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>CreateNewUserServlet</servlet-name>
 		<url-pattern>/createnewuser</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>RedirectToPagesServlet</servlet-name>
+		<servlet-class>com.fusionerp.controlers.RedirectToPagesServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>RedirectToPagesServlet</servlet-name>
 		<url-pattern>/redirect</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DropDownMenuServlet</servlet-name>
+		<servlet-class>com.fusionerp.controlers.DropDownMenuServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>DropDownMenuServlet</servlet-name>
 		<url-pattern>/dropdownmenu</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DropDownDependentServlet</servlet-name>
+		<servlet-class>com.fusionerp.controlers.DropDownDependentServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>DropDownDependentServlet</servlet-name>
 		<url-pattern>/dropdowndependent</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>GenerateCableNumber</servlet-name>
+		<servlet-class>com.fusionerp.controlers.GenerateCableNumber</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>GenerateCableNumber</servlet-name>
 		<url-pattern>/generatecablenumber</url-pattern>
