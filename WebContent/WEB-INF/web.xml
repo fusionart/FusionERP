@@ -1,65 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app id="WebApp_ID" version="3.1"
-	xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
-	<display-name>FusionERP</display-name>
-	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
-		<welcome-file>index.htm</welcome-file>
-		<welcome-file>index.jsp</welcome-file>
-	</welcome-file-list>
-	<servlet>
-		<servlet-name>CheckUserAndPassServlet</servlet-name>
-		<servlet-class>com.fusionerp.controlers.CheckUserAndPassServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>CheckUserAndPassServlet</servlet-name>
-		<url-pattern>/checkuserandpass</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>CreateNewUserServlet</servlet-name>
-		<servlet-class>com.fusionerp.controlers.CreateNewUserServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>CreateNewUserServlet</servlet-name>
-		<url-pattern>/createnewuser</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>RedirectToPagesServlet</servlet-name>
-		<servlet-class>com.fusionerp.controlers.RedirectToPagesServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>RedirectToPagesServlet</servlet-name>
-		<url-pattern>/redirect</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>DropDownMenuServlet</servlet-name>
-		<servlet-class>com.fusionerp.controlers.DropDownMenuServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>DropDownMenuServlet</servlet-name>
-		<url-pattern>/dropdownmenu</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>DropDownDependentServlet</servlet-name>
-		<servlet-class>com.fusionerp.controlers.DropDownDependentServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>DropDownDependentServlet</servlet-name>
-		<url-pattern>/dropdowndependent</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-		<servlet-name>GenerateCableNumber</servlet-name>
-		<servlet-class>com.fusionerp.controlers.GenerateCableNumber</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>GenerateCableNumber</servlet-name>
-		<url-pattern>/generatecablenumber</url-pattern>
-	</servlet-mapping>
-
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>FusionERP</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>CheckUserAndPassServlet</servlet-name>
+    <servlet-class>com.fusionerp.controlers.CheckUserAndPassServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CheckUserAndPassServlet</servlet-name>
+    <url-pattern>/checkuserandpass</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CreateNewUserServlet</servlet-name>
+    <servlet-class>com.fusionerp.controlers.CreateNewUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateNewUserServlet</servlet-name>
+    <url-pattern>/createnewuser</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RedirectToPagesServlet</servlet-name>
+    <servlet-class>com.fusionerp.controlers.RedirectToPagesServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RedirectToPagesServlet</servlet-name>
+    <url-pattern>/redirect</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DropDownMenuServlet</servlet-name>
+    <servlet-class>com.fusionerp.controlers.DropDownMenuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DropDownMenuServlet</servlet-name>
+    <url-pattern>/dropdownmenu</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DropDownDependentServlet</servlet-name>
+    <servlet-class>com.fusionerp.controlers.DropDownDependentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DropDownDependentServlet</servlet-name>
+    <url-pattern>/dropdowndependent</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>GenerateCableNumber</servlet-name>
+    <servlet-class>com.fusionerp.controlers.GenerateCableNumber</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GenerateCableNumber</servlet-name>
+    <url-pattern>/generatecablenumber</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+    <servlet-name>DropDownProjectsServlet</servlet-name>
+    <servlet-class>com.fusionerp.controlers.DropDownProjectsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DropDownProjectsServlet</servlet-name>
+    <url-pattern>/dropdownprojects</url-pattern>
+  </servlet-mapping>
+  
+  
+  
 </web-app>

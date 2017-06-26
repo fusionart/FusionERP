@@ -8,10 +8,11 @@
 <script>
 	$(document).ready(function() {
 		$.get('dropdownprojects', {
-			project : projects
+			
 		}, function(response) {
 			var select = $('#project');
 			select.find('option').remove();
+			$('<option>').val("-1").text('Изберете проект').appendTo(select);
 			$.each(response, function(index, value) {
 				$('<option>').val(index).text(value).appendTo(select);
 			});
