@@ -1,12 +1,15 @@
 package com.fusionerp.controlers;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.fusionerp.models.CurrentCableNumberToString;
 import com.fusionerp.models.SetCableFieldValues;
 
 import sun.security.action.GetBooleanAction;
@@ -55,6 +58,10 @@ public class GenerateCableNumber extends HttpServlet {
 
 		scfv.getValues(category, projectGroup, project, nextOperation, moq, prLocation, forLocation, cSection,
 				cableColor, clength, lSideTerminal, lSideSeal, rSideTerminal, rSideSeal);
+		
+		request.setAttribute("cableNumber", CurrentCableNumberToString.getCableNumber());
+		RequestDispatcher redirect = request.getRequestDispatcher("/WEB-INF/JSPs/cableCreated.jsp");
+		redirect.forward(request, response);
 
 		// System.out.println("name "+request.getParameter("project")+" /
 		// "+request.getParameter("category"));

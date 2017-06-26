@@ -12,6 +12,7 @@ public class SetCableFieldValues {
 	private CableModel cableModel = new CableModel();
 	private Connection conn = sqlConn.getConn();
 	private CableNumberDbWriter cndbw = new CableNumberDbWriter();
+	private CurrentCableNumberToString ccnts = new CurrentCableNumberToString();
 
 	public void getValues(String category, int projectGroup, int project, String nextOperation, int moq,
 			String prLocation, String forLocation, int cSection, int cableColor, int clength, int lSideTerminal,
@@ -32,6 +33,7 @@ public class SetCableFieldValues {
 		sealValue(lSideSeal, rSideSeal);
 		getNumberValue();
 		cndbw.writeInDb(cableModel);
+		ccnts.numberToString(cableModel);
 
 	}
 
