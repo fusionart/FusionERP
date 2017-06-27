@@ -8,7 +8,7 @@
 <script>
 	$(document).ready(function() {
 		$.get('dropdownprojects', {
-			
+			infoMenu : "response"
 		}, function(response) {
 			var select = $('#project');
 			select.find('option').remove();
