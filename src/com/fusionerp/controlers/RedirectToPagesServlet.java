@@ -50,7 +50,7 @@ public class RedirectToPagesServlet extends HttpServlet {
 
 		if (cable != null) {
 			RequestDispatcher redirect = request.getRequestDispatcher("/WEB-INF/JSPs/cable.jsp");
-			response.sendRedirect(request.getContextPath() + "/dropdownmenu");
+			redirect.forward(request, response);
 		}
 
 		if (registration != null) {

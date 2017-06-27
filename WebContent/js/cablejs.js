@@ -1,5 +1,4 @@
-$(document).ready(
-		function() {
+$(document).ready(function() {
 			$('#project').change(function(event) {
 				var projects = $("select#project").val();
 				$.get('dropdowndependent', {

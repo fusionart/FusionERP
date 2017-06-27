@@ -14,6 +14,7 @@
     <servlet-name>CheckUserAndPassServlet</servlet-name>
     <url-pattern>/checkuserandpass</url-pattern>
   </servlet-mapping>
+  
   <servlet>
     <servlet-name>CreateNewUserServlet</servlet-name>
     <servlet-class>com.fusionerp.controlers.CreateNewUserServlet</servlet-class>
@@ -22,6 +23,7 @@
     <servlet-name>CreateNewUserServlet</servlet-name>
     <url-pattern>/createnewuser</url-pattern>
   </servlet-mapping>
+  
   <servlet>
     <servlet-name>RedirectToPagesServlet</servlet-name>
     <servlet-class>com.fusionerp.controlers.RedirectToPagesServlet</servlet-class>
@@ -30,14 +32,7 @@
     <servlet-name>RedirectToPagesServlet</servlet-name>
     <url-pattern>/redirect</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <servlet-name>DropDownMenuServlet</servlet-name>
-    <servlet-class>com.fusionerp.controlers.DropDownMenuServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>DropDownMenuServlet</servlet-name>
-    <url-pattern>/dropdownmenu</url-pattern>
-  </servlet-mapping>
+
   <servlet>
     <servlet-name>DropDownDependentServlet</servlet-name>
     <servlet-class>com.fusionerp.controlers.DropDownDependentServlet</servlet-class>
@@ -46,6 +41,7 @@
     <servlet-name>DropDownDependentServlet</servlet-name>
     <url-pattern>/dropdowndependent</url-pattern>
   </servlet-mapping>
+  
   <servlet>
     <servlet-name>GenerateCableNumber</servlet-name>
     <servlet-class>com.fusionerp.controlers.GenerateCableNumber</servlet-class>
@@ -56,14 +52,12 @@
   </servlet-mapping>
   
     <servlet>
-    <servlet-name>DropDownProjectsServlet</servlet-name>
-    <servlet-class>com.fusionerp.controlers.DropDownProjectsServlet</servlet-class>
+    <servlet-name>PopulateDropDownMenusServlet</servlet-name>
+    <servlet-class>com.fusionerp.controlers.PopulateDropDownMenusServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>DropDownProjectsServlet</servlet-name>
-    <url-pattern>/dropdownprojects</url-pattern>
+    <servlet-name>PopulateDropDownMenusServlet</servlet-name>
+    <url-pattern>/populatedropdowns</url-pattern>
   </servlet-mapping>
-  
-  
-  
+
 </web-app>

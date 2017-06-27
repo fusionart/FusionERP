@@ -7,7 +7,7 @@
 <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
 <script>
 	$(document).ready(function() {
-		$.get('dropdownprojects', {
+		$.get('populatedropdowns', {
 			infoMenu : "response"
 		}, function(response) {
 			var select = $('#project');
