@@ -14,7 +14,6 @@
     <servlet-name>CheckUserAndPassServlet</servlet-name>
     <url-pattern>/checkuserandpass</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>CreateNewUserServlet</servlet-name>
     <servlet-class>com.fusionerp.controlers.CreateNewUserServlet</servlet-class>
@@ -23,7 +22,6 @@
     <servlet-name>CreateNewUserServlet</servlet-name>
     <url-pattern>/createnewuser</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>RedirectToPagesServlet</servlet-name>
     <servlet-class>com.fusionerp.controlers.RedirectToPagesServlet</servlet-class>
@@ -32,7 +30,6 @@
     <servlet-name>RedirectToPagesServlet</servlet-name>
     <url-pattern>/redirect</url-pattern>
   </servlet-mapping>
-
   <servlet>
     <servlet-name>DropDownDependentServlet</servlet-name>
     <servlet-class>com.fusionerp.controlers.DropDownDependentServlet</servlet-class>
@@ -41,7 +38,6 @@
     <servlet-name>DropDownDependentServlet</servlet-name>
     <url-pattern>/dropdowndependent</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>GenerateCableNumber</servlet-name>
     <servlet-class>com.fusionerp.controlers.GenerateCableNumber</servlet-class>
@@ -50,8 +46,7 @@
     <servlet-name>GenerateCableNumber</servlet-name>
     <url-pattern>/generatecablenumber</url-pattern>
   </servlet-mapping>
-  
-    <servlet>
+  <servlet>
     <servlet-name>PopulateDropDownMenusServlet</servlet-name>
     <servlet-class>com.fusionerp.controlers.PopulateDropDownMenusServlet</servlet-class>
   </servlet>
@@ -59,5 +54,16 @@
     <servlet-name>PopulateDropDownMenusServlet</servlet-name>
     <url-pattern>/populatedropdowns</url-pattern>
   </servlet-mapping>
-
+  
+   <servlet>
+    <servlet-name>PopulateInformationMenuServlet</servlet-name>
+    <servlet-class>com.fusionerp.controlers.PopulateInformationMenuServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PopulateInformationMenuServlet</servlet-name>
+    <url-pattern>/populateinfomenu</url-pattern>
+  </servlet-mapping>
+  
+  
+  
 </web-app>

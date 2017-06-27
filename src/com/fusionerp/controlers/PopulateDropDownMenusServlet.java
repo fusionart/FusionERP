@@ -53,7 +53,6 @@ public class PopulateDropDownMenusServlet extends HttpServlet {
 			response.setContentType("application/json");
 			response.setCharacterEncoding("UTF-8");
 			response.getWriter().write(jsonG);
-			System.out.println(jsonG.toString());
 		}
 
 		if (section != null) {
