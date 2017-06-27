@@ -3,6 +3,7 @@ package com.fusionerp.models;
 public class CableModel {
 	private String operation;
 	private String project;
+	private String projectLongName;
 	private String group;
 	private String number;
 	private String productionLocation;
@@ -106,6 +107,12 @@ public class CableModel {
 	}
 	public void setSealRight(String sealRight) {
 		this.sealRight = sealRight;
+	}
+	public String getProjectLongName() {
+		return projectLongName;
+	}
+	public void setProjectLongName(String projectLongName) {
+		this.projectLongName = projectLongName;
 	}
 	
 	

@@ -12,11 +12,26 @@
 		}, function(response) {
 			var select = $('#project');
 			select.find('option').remove();
-			$('<option>').val("-1").text('Изберете проект').appendTo(select);
+			$('<option>').val("-1").text('Изберете всички').appendTo(select);
 			$.each(response, function(index, value) {
 				$('<option>').val(index).text(value).appendTo(select);
 			});
 		});
+		
+		$('#project').change(function(event) {
+			var projects = $("select#project").val();
+			$('#cableTable').empty()
+			$.get('dropdowndependent', {
+				project : projects
+			}, function(response) {
+				var select = $('#projectGroup');
+				select.find('option').remove();
+				$.each(response, function(index, value) {
+					$('<option>').val(index).text(value).appendTo(select);
+				});
+			});
+		});
+		
 	});
 </script>
 </head>
@@ -24,14 +39,14 @@
 
 	<form name="getCables" id="getCables">
 		<select name="project" id="project">
-			<option value="-1">Изберете проект</option>
+		<%-- 			<option value="-1">Изберете проект</option>
 			<c:forEach items="${dropMenu}" var="dropMenuProjects">
 				<option value="${dropMenuProjects.key}">${dropMenuProjects.value}</option>
-			</c:forEach>
+			</c:forEach> --%>
 		</select>
 		<input type="submit" value="Давай">
 	</form>
-	<table>
+	<table id="cableTable">
 		<tr>
 			<th>Сериен номер</th>
 			<th>Проект</th>
