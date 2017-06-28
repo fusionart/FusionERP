@@ -34,15 +34,17 @@ public class RedirectToPagesServlet extends HttpServlet {
 		String infoMenu = request.getParameter("infoMenu");
 		String buyPart = request.getParameter("buyPart");
 		String cable = request.getParameter("cable");
+		String twisted = request.getParameter("twisted");
+		String splice = request.getParameter("splice");
 		String registration = request.getParameter("registration");
 		// System.out.println(registration);
 		String backBtn = request.getParameter("backBtn");
 
-		if (buyPart != null) {
+		if (buyPart != null || twisted != null || splice != null) {
 			RequestDispatcher redirect = request.getRequestDispatcher("/WEB-INF/HTML/underConstruction.html");
 			redirect.forward(request, response);
 		}
-		
+
 		if (infoMenu != null) {
 			RequestDispatcher redirect = request.getRequestDispatcher("/WEB-INF/JSPs/informationMenu.jsp");
 			redirect.forward(request, response);

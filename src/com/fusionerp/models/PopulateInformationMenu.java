@@ -32,6 +32,13 @@ public class PopulateInformationMenu {
 				String section = rs.getString("section");
 				String color = rs.getString("color");
 				int length = rs.getInt("length");
+				String prLoc = rs.getString("prloc");
+				String desLoc = rs.getString("desloc");
+				String nextOperation = rs.getString("nextop");
+				String terminalL = rs.getString("terminall");
+				String sealL = rs.getString("seall");
+				String terminalR = rs.getString("terminalr");
+				String sealR = rs.getString("sealR");
 
 				currentCable.setProjectLongName(projectName(project));
 				currentCable.setNumber(operation + project + groupe + sequence);
@@ -39,6 +46,25 @@ public class PopulateInformationMenu {
 				currentCable.setSection(section);
 				currentCable.setColor(color);
 				currentCable.setLength(length);
+				currentCable.setProductionLocation(prLoc);
+				currentCable.setDestiationLocation(desLoc);
+				currentCable.setNextOperation(nextOperation);
+				currentCable.setTerminalLeft(terminalL);
+				if (sealL.equals("null")){
+					currentCable.setSealLeft("-");
+				} else{
+					currentCable.setSealLeft(sealL);
+				}
+				if (terminalR.equals("null")){
+					currentCable.setTerminalRigth("-");
+				} else{
+					currentCable.setTerminalRigth(terminalR);
+				}
+				if (sealR.equals("null")){
+					currentCable.setSealRight("-");
+				} else{
+					currentCable.setSealRight(sealR);
+				}
 				cables.add(currentCable);
 			}
 			stmt.close();

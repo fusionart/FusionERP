@@ -182,5 +182,8 @@ $(document).ready(function() {
 		</div>
 		<input type="submit" value="Запази">
 	</form>
+	<form method = "get" action="redirect">
+		<input name="backBtn" id="backBtn" type="submit" value="Назад">
+	</form>
 </body>
 </html>
