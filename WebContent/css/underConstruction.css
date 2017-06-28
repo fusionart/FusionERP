@@ -1,0 +1,46 @@
+html {
+	background-color: #000000;
+}
+
+html, body
+{
+    height: 100%;
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+h1 {
+	color: red;
+	font-size:40px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+    animation: blinc 2s linear infinite;
+    animation-direction: alternate;
+}
+
+.container{
+	height:50%;
+	padding:15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #0d0d0d;
+	border-radius: 25px;
+	border: 1px solid #4d4d4d;
+}
+
+@keyframes blinc {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
