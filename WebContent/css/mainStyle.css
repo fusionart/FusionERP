@@ -1,0 +1,121 @@
+html {
+	height: 100%;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background-color: #434343;
+	background-image: linear-gradient(#434343, #282828);
+}
+
+h2 {
+	color: white;
+	font-size: 36px;
+}
+
+#content {
+	background-color: transparent;
+	background-image: linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, .05)
+		25%, rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%,
+		rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%,
+		transparent 77%, transparent),
+		linear-gradient(90deg, transparent 24%, rgba(255, 255, 255, .05) 25%,
+		rgba(255, 255, 255, .05) 26%, transparent 27%, transparent 74%,
+		rgba(255, 255, 255, .05) 75%, rgba(255, 255, 255, .05) 76%,
+		transparent 77%, transparent);
+	height: 100%;
+	background-size: 50px 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.log-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 500px;
+	height: 300px; 
+	background : rgba( 204, 204, 255, 0.1);
+	border: 2px solid #4d4d4d;
+	border-radius: 15px;
+	background: rgba(204, 204, 255, 0.1);
+	box-shadow: 15px 15px 100px 5px black, -2px -2px 15px 1px gray inset; 
+}
+
+.field {
+	margin-bottom:15px;
+	padding-left:5px;
+	height: 25px;
+	width: 100%;
+	border: 0px;
+	box-shadow: 3px 3px 10px 1px black;
+}
+
+.field:focus{
+	box-shadow:none;
+	outline:none;
+}
+
+.log-table {
+	display: table;
+	width: 100%;
+}
+
+.log-table p {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	color: gray;
+	text-shadow: 0 0 3px black;
+}
+
+.logBtn {
+	background-image: linear-gradient(#434343, #282828);
+	width: 100%;
+	height: 35px;
+	margin-top: 10px;
+  	border-radius: .3em;
+ 	border: 1px solid black;
+	color: white;
+	font-weight: bold;
+	box-shadow: 3px 3px 10px 1px black;
+}
+
+.logBtn:hover {
+    background-image: linear-gradient(#808080, #a6a6a6);
+    color: black;   
+}
+
+.line-style{
+	width: 90%;
+	border-bottom: 1px solid #808080;
+	margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+#registration {
+	background-image: linear-gradient(#434343, #282828);
+	width: 200px;
+	height: 25px;
+	margin-top: 10px;
+  	border-radius: .3em;
+ 	border: 1px solid black;
+	color: white;
+	box-shadow: 3px 3px 10px 1px black;
+}
+
+#registration:hover {
+    background-image: linear-gradient(#808080, #a6a6a6);
+    color: black;   
+}
+
+.small-font{
+	font-size: 12px;
+	text-align: center;
+}

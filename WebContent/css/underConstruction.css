@@ -1,5 +1,5 @@
 html {
-	background-color: #000000;
+	
 }
 
 html, body
@@ -12,6 +12,25 @@ body{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	background:
+        linear-gradient(-90deg, rgba(0,0,0,.05) 1px, transparent 1px),
+        linear-gradient(rgba(0,0,0,.05) 1px, transparent 1px), 
+        linear-gradient(-90deg, rgba(0, 0, 0, .04) 1px, transparent 1px),
+        linear-gradient(rgba(0,0,0,.04) 1px, transparent 1px),
+        linear-gradient(transparent 3px, #f2f2f2 3px, #f2f2f2 78px, transparent 78px),
+        linear-gradient(-90deg, #aaa 1px, transparent 1px),
+        linear-gradient(-90deg, transparent 3px, #f2f2f2 3px, #f2f2f2 78px, transparent 78px),
+        linear-gradient(#aaa 1px, transparent 1px),
+        #f2f2f2;
+    background-size:
+        4px 4px,
+        4px 4px,
+        80px 80px,
+        80px 80px,
+        80px 80px,
+        80px 80px,
+        80px 80px,
+        80px 80px;
 }
 
 h1 {
@@ -31,9 +50,8 @@ h1 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: #0d0d0d;
 	border-radius: 25px;
-	border: 1px solid #4d4d4d;
+	border: 2px solid #4d4d4d;
 }
 
 @keyframes blinc {

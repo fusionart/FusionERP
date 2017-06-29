@@ -4,6 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="CSS/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="css/mainStyle.css" rel="stylesheet" type="text/css" media="screen" />
 <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
 <style>
 #form label {
@@ -61,7 +62,9 @@
 <title>Регистрация</title>
 </head>
 <body>
+	<div id="content">
 	<h3>Регистрация на нов потребител</h3>
+	<div class="user-form">
 	<form class="form" name="form" id="form" method="post" action="createnewuser">
 		<table>
 			<tr>
@@ -69,30 +72,29 @@
 				<td><input type="text" name="username" id="username" required></td>
 			</tr>
 			<tr>
-				<td></td>
-				<td class="small-font">Може да съдържа букви и цифри, без интервали</td>
+				<td colspan="2" class="small-font">Може да съдържа букви и цифри, без интервали</td>
 			</tr>
 			<tr>
 				<td>Парола</td>
 				<td><input type="password" name="password" id="password" pattern=".{4,}" required title="4 characters minimum"></td>
 			</tr>
 			<tr>
-				<td></td>
-				<td class="small-font">Минимална дължина 4 символа</td>
+				<td colspan="2" class="small-font">Минимална дължина 4 символа</td>
 			</tr>
 			<tr>
 				<td>Парола (потвърждение)</td>
 				<td><input type="password" name="confirm_password" id="confirm_password" required> <span id="indicator"></span></td>
 			</tr>
 			<tr>
-				<td></td>
-				<td class="small-font">Въведете отново Вашата парола</td>
+				<td colspan="2" class="small-font">Въведете отново Вашата парола</td>
 			</tr>
 			<tr>
 				<td colspan="2" width="100%"><input type="submit" name="submit" id="regbtn" value="Регистрация" /></td>
 			</tr>
 		</table>
 	</form>
+	</div>
+	</div>
 
 	<%
 		String login_msg = (String) request.getAttribute("message");
