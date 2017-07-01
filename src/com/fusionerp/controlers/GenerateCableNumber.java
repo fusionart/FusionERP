@@ -36,6 +36,15 @@ public class GenerateCableNumber extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		String category = request.getParameter("category");
 		int projectGroup = Integer.valueOf(request.getParameter("projectGroup"));
 		int project = Integer.valueOf(request.getParameter("project"));
@@ -55,11 +64,12 @@ public class GenerateCableNumber extends HttpServlet {
 			rSideSeal = Integer.valueOf(request.getParameter("rsideseal"));			
 		}
 
-
 		scfv.getValues(category, projectGroup, project, nextOperation, moq, prLocation, forLocation, cSection,
 				cableColor, clength, lSideTerminal, lSideSeal, rSideTerminal, rSideSeal);
 		
 		request.setAttribute("cableNumber", CurrentCableNumberToString.getCableNumber());
+//		response.sendRedirect(request.getContextPath() + "/JSPs/cableCreated.jsp");
+//		return;
 		RequestDispatcher redirect = request.getRequestDispatcher("/WEB-INF/JSPs/cableCreated.jsp");
 		redirect.forward(request, response);
 
@@ -68,16 +78,6 @@ public class GenerateCableNumber extends HttpServlet {
 		//System.out.println("category " + category + " projectGroup " + projectGroup + " project " + project
 		//		+ " nextOperation " + nextOperation + " moq " + moq + " prLocation " + prLocation + " forLocation "
 		//		+ forLocation + " cSection " + cSection + " cableColor " + cableColor + " clength " + clength);
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
 	}
 
 }

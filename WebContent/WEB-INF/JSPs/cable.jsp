@@ -71,7 +71,7 @@
 	<div id="content">
 		<h2>Създаване на нов кабел</h2>
 		<div class="new-cable">
-			<form method="get" action="generatecablenumber">
+			<form method="post" action="generatecablenumber">
 				<input type="hidden" name="category" value="C">
 				<select name="project" id="project">
 					<%-- 			<option value="-1">Изберете проект</option>
