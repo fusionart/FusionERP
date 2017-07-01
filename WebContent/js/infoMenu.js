@@ -12,7 +12,7 @@ $(document).ready(
 							$.each(response, function(index, value) {
 								$('#cableTable').append(
 										"<tr> <td>" + value.number
-												+ "</td><td>"
+												+ "</td> <td>"
 												+ value.projectLongName
 												+ "</td> <td>" + value.group
 												+ "</td> <td>" + value.section

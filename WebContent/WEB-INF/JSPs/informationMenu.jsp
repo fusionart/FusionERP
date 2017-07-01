@@ -3,6 +3,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="css/mainStyle.css" rel="stylesheet" type="text/css" media="screen" />
 <title>Информационно меню</title>
 <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="js/infoMenu.js" type="text/javascript"></script>
@@ -22,39 +23,41 @@
 </script>
 </head>
 <body>
-
-	<form name="getCables" id="getCables">
-		<select name="project" id="project">
-			<%-- <option value="-1">Изберете проект</option>
+	<div id="content">
+	<h2>Информационно меню FusionERP</h2>
+		<form name="getCables" id="getCables">
+			<select name="project" id="project">
+				<%-- <option value="-1">Изберете проект</option>
 			<c:forEach items="${dropMenu}" var="dropMenuProjects">
 				<option value="${dropMenuProjects.key}">${dropMenuProjects.value}</option>
 			</c:forEach> --%>
-		</select>
-		<input type="submit" value="Филтрирай">
-	</form>
-	<table>
-		<thead>
-			<tr>
-				<th>Сериен номер</th>
-				<th>Проект</th>
-				<th>Група</th>
-				<th>Сечение</th>
-				<th>Цвят</th>
-				<th>Дължина</th>
-				<th>Контакт лява страна</th>
-				<th>Сеал лява страна</th>
-				<th>Контакт дясна страна</th>
-				<th>Сеал дясна страна</th>
-				<th>Следваща операция</th>
-				<th>Производствена локация</th>
-				<th>Дестинационна локация</th>
-			</tr>
-		</thead>
-		<tbody id="cableTable">
-		</tbody>
-	</table>
-	<form method="get" action="redirect">
-		<input name="backBtn" id="backBtn" type="submit" value="Назад">
-	</form>
+			</select>
+			<input type="submit" value="Филтрирай" class="filterBtn">
+		</form>
+		<table class="info-menu">
+			<thead>
+				<tr>
+					<th>Сериен номер</th>
+					<th>Проект</th>
+					<th>Група</th>
+					<th>Сечение</th>
+					<th>Цвят</th>
+					<th>Дължина</th>
+					<th>Контакт лява страна</th>
+					<th>Сеал лява страна</th>
+					<th>Контакт дясна страна</th>
+					<th>Сеал дясна страна</th>
+					<th>Следваща операция</th>
+					<th>Производствена локация</th>
+					<th>Дестинационна локация</th>
+				</tr>
+			</thead>
+			<tbody id="cableTable">
+			</tbody>
+		</table>
+		<form method="get" action="redirect">
+			<input name="backBtn" id="backBtn" type="submit" value="Назад">
+		</form>
+	</div>
 </body>
 </html>
