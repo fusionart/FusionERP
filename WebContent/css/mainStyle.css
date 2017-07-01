@@ -14,6 +14,7 @@ body {
 h2 {
 	color: white;
 	font-size: 36px;
+	text-shadow: 5px 5px 15px black;
 }
 
 #content {
@@ -40,26 +41,27 @@ h2 {
 	justify-content: center;
 	align-items: center;
 	width: 500px;
-	height: 300px; 
-	background : rgba( 204, 204, 255, 0.1);
+	height: 300px;
+	background: rgba(204, 204, 255, 0.1);
 	border: 2px solid #4d4d4d;
 	border-radius: 15px;
 	background: rgba(204, 204, 255, 0.1);
-	box-shadow: 15px 15px 100px 5px black, -2px -2px 15px 1px gray inset; 
+	box-shadow: 15px 15px 100px 5px black, -2px -2px 15px 1px gray inset;
 }
 
 .field {
-	margin-bottom:15px;
-	padding-left:5px;
+	margin-bottom: 15px;
+	padding-left: 5px;
 	height: 25px;
 	width: 100%;
 	border: 0px;
 	box-shadow: 3px 3px 10px 1px black;
+	height: 25px;
 }
 
-.field:focus{
-	box-shadow:none;
-	outline:none;
+.field:focus {
+	box-shadow: none;
+	outline: none;
 }
 
 .log-table {
@@ -80,23 +82,23 @@ h2 {
 	width: 100%;
 	height: 35px;
 	margin-top: 10px;
-  	border-radius: .3em;
- 	border: 1px solid black;
+	border-radius: .3em;
+	border: 1px solid black;
 	color: white;
 	font-weight: bold;
 	box-shadow: 3px 3px 10px 1px black;
 }
 
 .logBtn:hover {
-    background-image: linear-gradient(#808080, #a6a6a6);
-    color: black;   
+	background-image: linear-gradient(#808080, #a6a6a6);
+	color: black;
 }
 
-.line-style{
+.line-style {
 	width: 90%;
 	border-bottom: 1px solid #808080;
 	margin-top: 8px;
-    margin-bottom: 8px;
+	margin-bottom: 8px;
 }
 
 #registration {
@@ -104,59 +106,146 @@ h2 {
 	width: 200px;
 	height: 25px;
 	margin-top: 10px;
-  	border-radius: .3em;
- 	border: 1px solid black;
+	border-radius: .3em;
+	border: 1px solid black;
 	color: white;
 	box-shadow: 3px 3px 10px 1px black;
 }
 
 #registration:hover {
-    background-image: linear-gradient(#808080, #a6a6a6);
-    color: black;   
+	background-image: linear-gradient(#808080, #a6a6a6);
+	color: black;
 }
 
-.small-font{
+.small-font {
 	font-size: 12px;
 	text-align: center;
 }
 
-.info-menu{
+.info-menu {
 	margin: 25px 0px;
 	border: 2px solid #4CAF50;
 }
 
 .info-menu th {
-    background-color: #4CAF50;
-    color: white;
+	background-color: #4CAF50;
+	color: white;
 }
 
 .info-menu th, td {
 	text-align: left;
-    font-size: 13px;
-    padding:5px;
+	font-size: 13px;
+	padding: 5px;
 }
 
-.info-menu tr:nth-child(even) {background-color: #f2f2f2}
-.info-menu tr:nth-child(odd) {background-color: #d4d4d4}
-.info-menu tr:hover {background-color: #7997ff}
+.info-menu tr:nth-child(even) {
+	background-color: #f2f2f2
+}
+
+.info-menu tr:nth-child(odd) {
+	background-color: #d4d4d4
+}
+
+.info-menu tr:hover {
+	background-color: #7997ff
+}
 
 .filterBtn {
 	background-image: linear-gradient(#4CAF50, #265928);
 	width: 100%;
 	height: 35px;
 	margin-top: 10px;
-  	border-radius: .3em;
- 	border: 1px solid black;
+	border-radius: .3em;
+	border: 1px solid black;
 	color: white;
 	font-weight: bold;
 	box-shadow: 3px 3px 10px 1px black;
 }
 
 .filterBtn:hover {
-    background-image: linear-gradient(#265928, #4CAF50);  
+	background-image: linear-gradient(#265928, #4CAF50);
 }
 
-#project{
+#project {
 	width: 100%;
 	height: 30px;
+}
+
+#backBtn {
+	background-image: linear-gradient(#4CAF50, #265928);
+	width: 100px;
+	height: 25px;
+	margin-top: 10px;
+	border-radius: .3em;
+	border: 1px solid black;
+	color: black;
+	font-weight: bold;
+	box-shadow: 3px 3px 10px 1px black;
+}
+
+#backBtn:hover {
+	background-image: linear-gradient(#265928, #4CAF50);
+}
+
+.main-menu {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 500px;
+	height: 300px;
+	background: rgba(204, 204, 255, 0.1);
+	border: 2px solid #4d4d4d;
+	border-radius: 15px;
+	background: rgba(204, 204, 255, 0.1);
+	box-shadow: 15px 15px 100px 5px black, -2px -2px 15px 1px gray inset;
+}
+
+.main-menu form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.createNew, .buyPart, .infoMenu {
+	background-image: linear-gradient(#4CAF50, #265928);
+	width: 80%;
+	height: 35px;
+	margin-bottom: 15px;
+	border-radius: .3em;
+	border: 1px solid black;
+	color: black;
+	font-weight: bold;
+	box-shadow: 3px 3px 10px 1px black;
+}
+
+.createNew:hover, .buyPart:hover, .infoMenu:hover {
+	background-image: linear-gradient(#265928, #4CAF50);
+	color: white;
+}
+
+.subproducts {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.subproducts button{
+	background-image: linear-gradient(#4CAF50, #265928);
+	width: 50%;
+	height: 35px;
+	margin-bottom: 15px;
+	margin-right: 10px;
+	border-radius: .3em;
+	border: 1px solid black;
+	color: black;
+	font-weight: bold;
+	box-shadow: 3px 3px 10px 1px black;
+}
+
+.subproducts button:hover{
+	background-image: linear-gradient(#265928, #4CAF50);
 }
